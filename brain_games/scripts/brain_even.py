@@ -2,11 +2,7 @@ from random import randint
 
 import prompt
 
-from brain_games import welcome_user
-
-YES = 'yes'
-NO = 'no'
-GAMES_TO_WIN = 3
+from .brain_games import GAMES_TO_WIN, NO, YES, welcome_user
 
 
 def get_correct_answer(number):
@@ -15,17 +11,13 @@ def get_correct_answer(number):
     return NO
 
 
-def check_answer(number, answer):
-    if answer not in [YES, NO]:
-        return False
-
-    correct_answer = get_correct_answer(number)
-    if answer == correct_answer:
+def is_user_correct(number, answer):
+    if answer == get_correct_answer(number):
         return True
     return False
 
 
-def ask(number):
+def ask_is_even(number):
     answer = prompt.string(f'Question: {number}\n')
     return answer
 
@@ -39,9 +31,9 @@ def main():
     while won_games < GAMES_TO_WIN:
         number = randint(1, 1000)
         correct_answer = get_correct_answer(number)
-        user_answer = ask(number)
-        is_answer_right = check_answer(number, user_answer)
-        if is_answer_right:
+        user_answer = ask_is_even(number)
+
+        if is_user_correct(number, user_answer):
             won_games += 1
             continue
         print(f"'{user_answer}' is wrong answer ;(. "

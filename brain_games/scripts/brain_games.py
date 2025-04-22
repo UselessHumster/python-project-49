@@ -1,5 +1,9 @@
 import prompt
 
+YES = 'yes'
+NO = 'no'
+GAMES_TO_WIN = 3
+
 
 def welcome_user():
     name = prompt.string('May I have your name? ')

@@ -2,6 +2,10 @@ import prompt
 
 from brain_games.games.config import GAMES_TO_WIN
 
+def is_answer_correct(answer: str, correct_answer: str):
+    return answer == correct_answer
+
+
 def wrong_answer(user_answer, correct_answer):
     print(f"'{user_answer}' is wrong answer ;(. "
           f"Correct answer was '{correct_answer}'")

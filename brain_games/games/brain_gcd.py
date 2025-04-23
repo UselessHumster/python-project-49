@@ -1,6 +1,6 @@
 from random import randint
 
-from brain_games.games.core import ask, wrong_answer
+from brain_games.games.core import ask, wrong_answer, is_answer_correct
 
 
 GAME_QUESTION = 'Find the greatest common divisor of given numbers.'
@@ -18,13 +18,6 @@ def get_correct_answer(number1: int, number2: int):
             num2 = remainder
 
 
-def is_user_correct(number1: int, number2: int,  answer: str):
-    if answer.isnumeric():
-        if int(answer) == get_correct_answer(number1, number2):
-            return True
-    return False
-
-
 def game():
     number1 = randint(1, 100)
     number2 = randint(1, 100)
@@ -34,7 +27,7 @@ def game():
                 f'Your answer: ')
     user_answer = ask(question)
 
-    if is_user_correct(number1, number2, user_answer):
+    if is_answer_correct(str(user_answer), str(correct_answer)):
         return True
 
     wrong_answer(user_answer, correct_answer)

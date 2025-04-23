@@ -1,19 +1,15 @@
 import prompt
 
-YES = 'yes'
-NO = 'no'
-GAMES_TO_WIN = 3
 
-
-def welcome_user():
+def greetings():
+    print('Welcome to the Brain Games!')
     name = prompt.string('May I have your name? ')
     print(f'Hello, {name}')
     return name
 
 
 def main():
-    print('Welcome to the Brain Games!')
-    welcome_user()
+    greetings()
 
 
 if __name__ == '__main__':

@@ -2,7 +2,7 @@ from random import randint, choice
 
 from brain_games.games.config import OPERATIONS
 
-from brain_games.games.core import ask
+from brain_games.games.core import ask, wrong_answer
 
 
 GAME_QUESTION = 'What is the result of the expression?'
@@ -32,12 +32,12 @@ def game():
     operation = choice(OPERATIONS)
     correct_answer = get_correct_answer(number1, number2, operation)
 
-    question = f'{number1} {operation} {number2}\n'
+    question = (f'{number1} {operation} {number2}\n'
+                f'Your answer: ')
     user_answer = ask(question)
 
     if is_user_correct(number1, number2, operation, user_answer):
         return True
 
-    print(f"'{user_answer}' is wrong answer ;(. "
-          f"Correct answer was '{correct_answer}'")
+    wrong_answer(user_answer, correct_answer)
     return False

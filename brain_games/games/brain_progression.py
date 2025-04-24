@@ -36,7 +36,8 @@ def game():
 
     correct_answer = get_correct_answer(progression)
 
-    progression_to_show = " ".join(hide_correct_answer(progression, correct_answer))
+    hidden_progression = hide_correct_answer(progression, correct_answer)
+    progression_to_show = " ".join(hidden_progression)
     question = (f'Question: {progression_to_show}\n'
                 f'Your answer: ')
     user_answer = ask(question)

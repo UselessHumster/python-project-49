@@ -1,9 +1,6 @@
 from brain_games import greetings
 
 
-
-
-
 def main():
     greetings()
 

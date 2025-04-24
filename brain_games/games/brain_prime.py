@@ -1,6 +1,6 @@
 from random import randint
 
-from brain_games.games.config import NO, YES
+from brain_games.games.config import NO, YES, START_RANDOM
 from brain_games.games.core import ask, is_answer_correct, wrong_answer
 
 PRIME_NUMBERS = [2, 3, 5, 7, 11, 13, 17, 19, 23,
@@ -93,7 +93,7 @@ def get_correct_answer(number):
 
 
 def game():
-    number = randint(0, PRIME_NUMBERS[-1])
+    number = randint(START_RANDOM, PRIME_NUMBERS[-1])
 
     correct_answer = get_correct_answer(number)
 

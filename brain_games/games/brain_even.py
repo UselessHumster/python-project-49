@@ -1,6 +1,6 @@
 from random import randint
 
-from brain_games.games.config import NO, YES
+from brain_games.games.config import NO, YES, START_RANDOM, END_RANDOM
 from brain_games.games.core import ask, is_answer_correct, wrong_answer
 
 RULE = 'Answer "yes" if the number is even, otherwise answer "no".'
@@ -13,7 +13,7 @@ def get_correct_answer(number: int):
 
 
 def game():
-    number = randint(1, 1000)
+    number = randint(START_RANDOM, END_RANDOM)
     correct_answer = get_correct_answer(number)
 
     question = (f'Question: {number}\n'

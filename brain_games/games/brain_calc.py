@@ -1,6 +1,6 @@
 from random import choice, randint
 
-from brain_games.games.config import OPERATIONS
+from brain_games.games.config import OPERATIONS, START_RANDOM, END_RANDOM
 from brain_games.games.core import ask, is_answer_correct, wrong_answer
 
 RULE = 'What is the result of the expression?'
@@ -18,8 +18,8 @@ def get_correct_answer(number1: int, number2: int, operation: str):
 
 
 def game():
-    number1 = randint(1, 10)
-    number2 = randint(1, number1)
+    number1 = randint(START_RANDOM, END_RANDOM)
+    number2 = randint(START_RANDOM, number1)
     operation = choice(OPERATIONS)
     correct_answer = get_correct_answer(number1, number2, operation)
 

@@ -2,6 +2,8 @@ from random import randint
 
 from brain_games.games.core import ask, is_answer_correct, wrong_answer
 
+from brain_games.games.config import START_RANDOM, END_RANDOM
+
 RULE = 'What number is missing in the progression?'
 START_FOR_STEP = 1
 END_FOR_STEP = 10
@@ -13,7 +15,7 @@ PROGRESSION_LENGTH_TO = 10
 def generate_progression():
     progression = []
     step = randint(START_FOR_STEP, END_FOR_STEP)
-    num = randint(1, 1000)
+    num = randint(START_RANDOM, END_RANDOM)
     for i in range(randint(PROGRESSION_LENGTH_FROM, PROGRESSION_LENGTH_TO)):
         progression.append(str(num))
         num += step

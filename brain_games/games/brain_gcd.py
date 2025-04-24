@@ -2,6 +2,8 @@ from random import randint
 
 from brain_games.games.core import ask, is_answer_correct, wrong_answer
 
+from brain_games.games.config import START_RANDOM, END_RANDOM
+
 RULE = 'Find the greatest common divisor of given numbers.'
 
 
@@ -18,8 +20,8 @@ def get_correct_answer(number1: int, number2: int):
 
 
 def game():
-    number1 = randint(1, 100)
-    number2 = randint(1, 100)
+    number1 = randint(START_RANDOM, END_RANDOM)
+    number2 = randint(START_RANDOM, END_RANDOM)
     correct_answer = get_correct_answer(number1, number2)
 
     question = (f'Question: {number1} {number2}\n'

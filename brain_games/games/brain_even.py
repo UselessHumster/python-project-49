@@ -1,11 +1,10 @@
 from random import randint
 
-from brain_games.games.config import YES, NO
-
-from brain_games.games.core import ask, wrong_answer, is_answer_correct
-
+from brain_games.games.config import NO, YES
+from brain_games.games.core import ask, is_answer_correct, wrong_answer
 
 RULE = 'Answer "yes" if the number is even, otherwise answer "no".'
+
 
 def get_correct_answer(number: int):
     if number % 2 == 0:

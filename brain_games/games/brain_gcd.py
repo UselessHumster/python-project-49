@@ -1,7 +1,6 @@
 from random import randint
 
-from brain_games.games.core import ask, wrong_answer, is_answer_correct
-
+from brain_games.games.core import ask, is_answer_correct, wrong_answer
 
 RULE = 'Find the greatest common divisor of given numbers.'
 

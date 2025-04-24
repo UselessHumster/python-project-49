@@ -1,6 +1,6 @@
-from random import randint, choice
+from random import randint
 
-from brain_games.games.core import is_answer_correct, wrong_answer, ask
+from brain_games.games.core import ask, is_answer_correct, wrong_answer
 
 RULE = 'What number is missing in the progression?'
 START_FOR_STEP = 1
@@ -21,7 +21,7 @@ def generate_progression():
 
 
 def get_correct_answer(progression):
-    pull_number = randint(1, len(progression)-1)
+    pull_number = randint(1, len(progression) - 1)
     return progression[pull_number]
 
 

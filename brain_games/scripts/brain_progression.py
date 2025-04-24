@@ -4,5 +4,10 @@ from brain_games.games import (
     start_game,
 )
 
-if __name__ == '__main__':
+
+def main():
     start_game(progression_game, PROGRESSION_RULE)
+
+
+if __name__ == '__main__':
+    main()

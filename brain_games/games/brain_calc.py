@@ -5,7 +5,7 @@ from brain_games.games.config import OPERATIONS
 from brain_games.games.core import ask, wrong_answer, is_answer_correct
 
 
-GAME_QUESTION = 'What is the result of the expression?'
+RULE = 'What is the result of the expression?'
 
 
 def get_correct_answer(number1: int, number2: int, operation: str):

@@ -5,7 +5,7 @@ from brain_games.games.config import YES, NO
 from brain_games.games.core import ask, wrong_answer, is_answer_correct
 
 
-GAME_QUESTION = 'Answer "yes" if the number is even, otherwise answer "no".'
+RULE = 'Answer "yes" if the number is even, otherwise answer "no".'
 
 def get_correct_answer(number: int):
     if number % 2 == 0:

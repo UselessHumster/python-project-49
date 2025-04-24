@@ -3,7 +3,7 @@ from random import randint
 from brain_games.games.core import ask, wrong_answer, is_answer_correct
 
 
-GAME_QUESTION = 'Find the greatest common divisor of given numbers.'
+RULE = 'Find the greatest common divisor of given numbers.'
 
 
 def get_correct_answer(number1: int, number2: int):

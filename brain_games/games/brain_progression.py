@@ -2,7 +2,7 @@ from random import randint, choice
 
 from brain_games.games.core import is_answer_correct, wrong_answer, ask
 
-GAME_QUESTION = 'What number is missing in the progression?'
+RULE = 'What number is missing in the progression?'
 START_FOR_STEP = 1
 END_FOR_STEP = 10
 

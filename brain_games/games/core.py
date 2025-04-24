@@ -16,11 +16,11 @@ def ask(question: str):
     return answer
 
 
-def greetings(game_question:str):
+def greetings(game_rule:str):
     print('Welcome to the Brain Games!')
     name = prompt.string('May I have your name? ')
     print(f'Hello, {name}')
-    print(game_question)
+    print(game_rule)
     return name
 
 def start_game(game, game_question: str):
@@ -31,6 +31,7 @@ def start_game(game, game_question: str):
     while won_games < GAMES_TO_WIN:
         if game():
             won_games += 1
+            print('Correct!')
 
         else:
             break

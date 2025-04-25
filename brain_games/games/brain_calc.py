@@ -23,7 +23,7 @@ def game():
     operation = choice(OPERATIONS)
     correct_answer = get_correct_answer(number1, number2, operation)
 
-    question = (f'{number1} {operation} {number2}\n'
+    question = (f'Question: {number1} {operation} {number2}\n'
                 f'Your answer: ')
     user_answer = ask(question)
 

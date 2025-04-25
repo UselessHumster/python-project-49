@@ -31,4 +31,4 @@ def start_game(game, game_rule: str):
             break
 
     if won_games == GAMES_TO_WIN:
-        print(f'Congratulations, {name}')
+        print(f'Congratulations, {name}!')

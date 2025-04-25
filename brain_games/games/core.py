@@ -1,7 +1,7 @@
 import prompt
 
-from brain_games.games.config import GAMES_TO_WIN
 from brain_games import greetings
+from brain_games.games.config import GAMES_TO_WIN
 
 
 def is_answer_correct(answer: str, correct_answer: str):

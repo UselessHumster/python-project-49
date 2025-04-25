@@ -1,6 +1,6 @@
 from random import randint
 
-from brain_games.games.config import NO, YES, START_RANDOM
+from brain_games.games.config import NO, START_RANDOM, YES
 from brain_games.games.core import ask, is_answer_correct, wrong_answer
 
 PRIME_NUMBERS = [2, 3, 5, 7, 11, 13, 17, 19, 23,

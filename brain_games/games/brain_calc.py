@@ -1,6 +1,6 @@
 from random import choice, randint
 
-from brain_games.games.config import OPERATIONS, START_RANDOM, END_RANDOM
+from brain_games.games.config import END_RANDOM, OPERATIONS, START_RANDOM
 from brain_games.games.core import ask, is_answer_correct, wrong_answer
 
 RULE = 'What is the result of the expression?'

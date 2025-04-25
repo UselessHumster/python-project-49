@@ -1,8 +1,7 @@
 from random import randint
 
+from brain_games.games.config import END_RANDOM, START_RANDOM
 from brain_games.games.core import ask, is_answer_correct, wrong_answer
-
-from brain_games.games.config import START_RANDOM, END_RANDOM
 
 RULE = 'What number is missing in the progression?'
 START_FOR_STEP = 1

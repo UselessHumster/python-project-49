@@ -28,6 +28,7 @@ def start_game(game, game_rule: str):
             print('Correct!')
 
         else:
+            print(f"Let's try again, {name}!")
             break
 
     if won_games == GAMES_TO_WIN:

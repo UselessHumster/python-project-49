@@ -13,3 +13,4 @@ lint:
 package-reinstall: build
 	uv tool install --force dist/*.whl
 
+install: build package-install

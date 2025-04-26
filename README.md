@@ -18,7 +18,7 @@
 
 
 ---
-### Instalation
+### Installation
 ```
 git clone https://github.com/UselessHumster/python-project-49.git
 cd python-project-49

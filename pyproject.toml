@@ -1,4 +1,7 @@
 [project]
+authors = [
+    {name = "Just a student", email = "npopov2@yandex.com"},
+]
 name = "hexlet-code"
 version = "0.1.0"
 description = "A game that helps you to train your brain!"

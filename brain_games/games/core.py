@@ -1,16 +1,7 @@
 import prompt
 
 from brain_games import greetings
-from brain_games.games.config import GAMES_TO_WIN
-
-
-def is_answer_correct(answer: str, correct_answer: str):
-    return answer == correct_answer
-
-
-def wrong_answer(user_answer, correct_answer):
-    print(f"'{user_answer}' is wrong answer ;(. "
-          f"Correct answer was '{correct_answer}'")
+from brain_games.games.utils import GAMES_TO_WIN
 
 
 def ask(question: str):
@@ -26,10 +17,8 @@ def start_game(game, game_rule: str):
         if game():
             won_games += 1
             print('Correct!')
-
-        else:
-            print(f"Let's try again, {name}!")
-            break
+            return
+        print(f"Let's try again, {name}!")
 
     if won_games == GAMES_TO_WIN:
         print(f'Congratulations, {name}!')

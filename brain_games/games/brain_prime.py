@@ -1,9 +1,15 @@
 from random import randint
 
-from brain_games.games.config import NO, START_RANDOM, YES
-from brain_games.games.core import ask, is_answer_correct, wrong_answer
+from brain_games.games.core import ask
+from brain_games.games.utils import (
+    NO_ANSWER,
+    START_RANDOM,
+    YES_ANSWER,
+    is_answer_correct,
+    print_wrong_answer,
+)
 
-PRIME_NUMBERS = [2, 3, 5, 7, 11, 13, 17, 19, 23,
+PRIME_NUMBERS = [1, 2, 3, 5, 7, 11, 13, 17, 19, 23,
                  29, 31, 37, 41, 43, 47, 53, 59,
                  61, 67, 71, 73, 79, 83, 89, 97,
                  101, 103, 107, 109, 113, 127, 131,
@@ -88,12 +94,13 @@ RULE = 'Answer "yes" if given number is prime. Otherwise answer "no".'
 
 def get_correct_answer(number):
     if number in PRIME_NUMBERS:
-        return YES
-    return NO
+        return YES_ANSWER
+    return NO_ANSWER
 
 
 def game():
-    number = randint(START_RANDOM, PRIME_NUMBERS[-1])
+    last_prime_number = PRIME_NUMBERS[-1]
+    number = randint(START_RANDOM, last_prime_number)
 
     correct_answer = get_correct_answer(number)
 
@@ -104,5 +111,5 @@ def game():
     if is_answer_correct(str(user_answer), str(correct_answer)):
         return True
 
-    wrong_answer(user_answer, correct_answer)
+    print_wrong_answer(user_answer, correct_answer)
     return False

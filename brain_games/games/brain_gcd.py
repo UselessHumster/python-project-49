@@ -1,7 +1,12 @@
 from random import randint
 
-from brain_games.games.config import END_RANDOM, START_RANDOM
-from brain_games.games.core import ask, is_answer_correct, wrong_answer
+from brain_games.games.core import ask
+from brain_games.games.utils import (
+    END_RANDOM,
+    START_RANDOM,
+    is_answer_correct,
+    print_wrong_answer,
+)
 
 RULE = 'Find the greatest common divisor of given numbers.'
 
@@ -30,5 +35,5 @@ def game():
     if is_answer_correct(str(user_answer), str(correct_answer)):
         return True
 
-    wrong_answer(user_answer, correct_answer)
+    print_wrong_answer(user_answer, correct_answer)
     return False

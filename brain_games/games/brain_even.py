@@ -1,15 +1,22 @@
 from random import randint
 
-from brain_games.games.config import END_RANDOM, NO, START_RANDOM, YES
-from brain_games.games.core import ask, is_answer_correct, wrong_answer
+from brain_games.games.core import ask
+from brain_games.games.utils import (
+    END_RANDOM,
+    NO_ANSWER,
+    START_RANDOM,
+    YES_ANSWER,
+    is_answer_correct,
+    print_wrong_answer,
+)
 
 RULE = 'Answer "yes" if the number is even, otherwise answer "no".'
 
 
 def get_correct_answer(number: int):
     if number % 2 == 0:
-        return YES
-    return NO
+        return YES_ANSWER
+    return NO_ANSWER
 
 
 def game():
@@ -23,5 +30,5 @@ def game():
     if is_answer_correct(str(user_answer), str(correct_answer)):
         return True
 
-    wrong_answer(user_answer, correct_answer)
+    print_wrong_answer(user_answer, correct_answer)
     return False

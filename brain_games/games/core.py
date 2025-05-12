@@ -17,7 +17,7 @@ def start_game(game, game_rule: str):
         if game():
             won_games += 1
             print('Correct!')
-            return
+            continue
         print(f"Let's try again, {name}!")
 
     if won_games == GAMES_TO_WIN:

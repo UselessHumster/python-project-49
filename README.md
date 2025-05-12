@@ -22,7 +22,7 @@
 ```
 git clone https://github.com/UselessHumster/python-project-49.git
 cd python-project-49
-make package-install
+make install
 ```
 Demonstration asciinema:
 
@@ -32,7 +32,7 @@ Demonstration asciinema:
 ---
 
 ### Games
-To start a game, simply type name of the game _(after instalation of course)_
+To start a game, simply type name of the game _(after installation of course)_
 
 
 Brain Games - It's just a greetings

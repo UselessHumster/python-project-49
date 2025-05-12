@@ -19,6 +19,7 @@ def start_game(game, game_rule: str):
             print('Correct!')
             continue
         print(f"Let's try again, {name}!")
+        return
 
     if won_games == GAMES_TO_WIN:
         print(f'Congratulations, {name}!')
